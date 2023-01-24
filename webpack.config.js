@@ -15,6 +15,7 @@ Encore
     .copyFiles({
         from: './assets/images',
         to: 'images/[path][name].[ext]',
+        //to: 'images/[path][name].[hash:8].[ext]',
         pattern: /\.(png|jpg|jpeg|svg|pdf|ico|mp4|webp|webm)$/
     })
 
@@ -75,6 +76,8 @@ Encore
 
 // uncomment if you're having problems with a jQuery plugin
 //.autoProvidejQuery()
+    .configureFilenames({
+        assets: '[path][name].[hash:8].[ext]',
+    })
 ;
-Encore.setOutputPath('/build');
 module.exports = Encore.getWebpackConfig();

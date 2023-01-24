@@ -1,0 +1,43 @@
+footer{
+  background-color:#000;
+  > div{
+    background-color:#181717;
+    width:$site-width-l;
+    margin:0 auto;
+    height:220px;
+
+    #medias{
+      display: flex;
+      justify-content: space-around;
+      margin: 0 auto;
+      padding:15px 0;
+      width: 320px;
+      a{
+        display:inline-block;
+        height:62px;
+        width:62px;
+
+        &.instagram{
+          background-image:url('../../images/logo/instagram.webp');
+        }
+        &.facebook{
+          background-image:url('../../images/logo/facebook.webp');
+        }
+        &.tiktok{
+          background-image:url('../../images/logo/tiktok.webp');
+        }
+      }
+    }
+
+    #footer_nav{
+      display:flex;
+      justify-content:center;
+      color:#C2C2C2;
+      margin:10px auto;
+
+      a{
+        padding:10px;
+      }
+    }
+  }
+}
