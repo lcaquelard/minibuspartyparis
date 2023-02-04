@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+        <h1>nos bus</h1>
+        <p>
+            Nous vous proposons différentes expériences selon vos besoins.<br>
+            Mini Bus Party s'adapte à vos envies, petites ou grandes,<br>
+            classiques ou pleines de fantaisies, c'est votre choix.
+        </p>
+        <div id="packs">
+            {% for pack in packs %}
+            <div class="pack">
+                <img class="pack-left" src="{{ asset('build/images/photo/bus/'~ pack.getName() ~'.webp') }}" alt="Photo associée à l'expérience {{ pack.getTitle() }}">
+                <div class="pack-right">
+                    <h2>{{ pack.getTitle() }}</h2>
+                    <div class="pack-options">
+                        {% for name, title in pack.getOptions() %}
+                        <div class="pack-option">
+                            <div class="pack-option-logo {{ name }}"></div>
+                            <div class="pack-option-name">{{ title }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

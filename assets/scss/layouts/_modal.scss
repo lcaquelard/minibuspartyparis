@@ -1,0 +1,104 @@
+div.modal{
+  display:none;
+  visibility:hidden;
+  opacity:0;
+  @include position(fixed);
+  background:#FFF;
+  z-index:1;
+  overflow:hidden;
+  .close{
+    @include background-prs();
+    background-image: url(../../images/icon/close.webp);
+    position:absolute;
+    top:10px;
+    right:10px;
+    width:26px;
+    height:26px;
+    cursor:pointer;
+    @media all and (max-width:$site-width-s){
+      top:10px;
+      right:10px;
+      width:20px;
+      height:20px;
+    }
+  }
+  .slider{
+    margin:0 46px;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media all and (max-width: $site-width-s) {
+      margin: 40px 0 0;
+      .slick-slide {
+        margin-left: 0;
+        margin-right: 0;
+        height:100%;
+      }
+    }
+    .slick-prev, .slick-next {
+      @media all and (max-width: $site-width-s) {display: none !important;}
+      @include background-prs();
+      &:before {content: "";}
+    }
+    .slick-prev {background-image: url(../../images/icon/prev.webp);}
+    .slick-next {background-image: url(../../images/icon/next.webp);}
+    .slick-list{
+      height:100%;
+      .slick-track {
+        display: flex !important;
+        align-items:flex-start;
+        height:100%;
+        .slick-slide {
+          height: auto;
+          max-height:100%;
+          object-fit:contain;
+        }
+      }
+    }
+    &.side-content {
+      .slick-slide {
+        display: flex;
+        @media all and (max-width: $site-width-s) {
+          flex-direction: column;
+        }
+        > img {
+          width: 54%;
+          @media all and (max-width: $site-width-s) {
+            width: 100%
+          }
+        }
+        > p {
+          padding-top: 200px;
+          width: calc(46% - 50px);
+          @media all and (max-width: $site-width-s) {
+            padding-top: 0;
+            width: 100%
+          }
+          font-size: 28px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+div.modal.active{
+  animation: APPEAR .5s;
+  animation-fill-mode: both;
+
+  opacity:1;
+  display:block;
+  visibility:visible;
+}
+@keyframes APPEAR{
+  from{
+    opacity:0;
+    display:none;
+    visibility:hidden;
+  }
+  to{
+    opacity:1;
+    display:block;
+    visibility:visible;
+  }
+}

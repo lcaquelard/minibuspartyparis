@@ -1,0 +1,98 @@
+@use "sass:math";
+#page_index{
+  #index_main{
+    background-image: url('../../images/background/index.webp');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:center;
+
+    #greeting{
+      text-align: center;
+      background-color:$background-black-strong-alpha;
+      max-width:575px;
+      width:100%;
+      margin:65px auto;
+
+      #welcome{
+        font-family:"Marzo W00 Regular", arial, sans-serif;
+        text-transform: uppercase;
+        font-weight:bold;
+        font-size:60px;
+        margin:15px 0;
+      }
+      h1{
+        font-family:"open sans", sans-serif;
+        font-weight:normal;
+        margin:40px 0;
+        font-size:32px;
+      }
+      p{
+        margin:30px 0;
+        font-size:16px;
+        line-height:23px;
+        padding:20px 80px;
+
+        .larger{
+          font-size:19px;
+        }
+      }
+    }
+    #index_slider{
+      margin:0 auto;
+      width:100%;
+      height:450px;
+      max-width:$site-width-l;
+      @media all and (max-width:$site-width-l + 50px){
+        .slick-prev,.slick-next{
+          display:none !important;
+        }
+      }
+      .slick-list {
+        height:100%;
+        .slick-track {
+          height: 100%;
+
+          .slick-slide {
+            height: 100%;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  #contact{
+    background-image:radial-gradient(circle at 79.9723% 100%, rgb(128, 121, 255) 0%, 17.5%, rgba(128, 121, 255, 0) 35%), radial-gradient(circle at 92.5081% 97.3014%, rgb(128, 121, 255) 0%, 17.5%, rgba(128, 121, 255, 0) 35%), radial-gradient(circle at 37.2038% 11.2174%, rgb(24, 23, 23) 0%, 17.5%, rgba(24, 23, 23, 0) 35%), radial-gradient(circle at 98.1055% 23.2161%, rgb(24, 23, 23) 0%, 20%, rgba(24, 23, 23, 0) 40%), radial-gradient(circle at 30.8708% 96.2858%, rgba(128, 121, 255, 0.99) 0%, 25%, rgba(128, 121, 255, 0) 50%), radial-gradient(circle at 6.16536% 12.6172%, rgb(24, 23, 23) 0%, 42%, rgba(24, 23, 23, 0) 70%), radial-gradient(circle at 61.7122% 37.5651%, rgb(24, 23, 23) 0%, 42%, rgba(24, 23, 23, 0) 70%), radial-gradient(circle at 48.9014% 49.5215%, rgb(255, 255, 255) 0%, 100%, rgba(255, 255, 255, 0) 100%);
+    padding:70px 0;
+    >div{
+      width:100%;
+      max-width:$site-width-l - 100px;
+      margin:0 auto;
+      padding: 30px 0;
+      background-color:$background-black-alpha;
+
+      table{
+        border:none;
+        width:100%;
+        font-size:16px;
+        font-weight:bold;
+        border-collapse:collapse;
+        td{
+          width:math.div(100%, 3);
+          text-align:center;
+          height:90px;
+          &.logo{
+            background-image:url('../../images/logo/busdiscotheque.webp');
+            background-repeat: no-repeat;
+            background-size:contain;
+            background-position:center center;
+          }
+        }
+        thead{
+          td{
+            height:60px;
+          }
+        }
+      }
+    }
+  }
+}

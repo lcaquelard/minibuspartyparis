@@ -1,0 +1,134 @@
+#page_options{
+  background-color:$background-black;
+  #catering{
+    >p{
+      text-align:center;
+    }
+    table{
+      width:100%;
+      max-width:350px;
+      margin: auto;
+      font-size:13px;
+      text-align:center;
+      tr{
+        height:18px;
+        td{
+          width:100% / 3;
+        }
+      }
+    }
+    #catering_slider{
+      margin:10px auto;
+      width:100%;
+      height:450px;
+      max-width:$site-width-l;
+      @media all and (max-width:$site-width-l + 50px){
+        .slick-prev,.slick-next{
+          display:none !important;
+        }
+      }
+      .slick-list {
+        height:100%;
+        .slick-track {
+          height: 100%;
+
+          .slick-slide {
+            height: 100%;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  #other_options{
+    h3{
+      text-transform: uppercase;
+      font-size:60px;
+      line-height:100px;
+      font-family: "Marzo W00 Regular", sans-serif;
+      @media all and (max-width:$site-width-m){
+        font-size:40px;
+      }
+      @media all and (max-width:$site-width-s){
+        font-size:30px;
+      }
+    }
+    #options{
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap;
+      justify-content: space-around;
+      width:100%;
+      max-width:$site-width-l;
+      margin:20px auto;
+      .option{
+        margin:10px 0;
+        flex-basis:31%;
+        &:nth-of-type(1){
+          flex-basis:45%;
+        }
+        &:nth-of-type(2){
+          flex-basis:37%;
+        }
+        &-icon{
+          background-repeat:no-repeat;
+          background-position:center center;
+          background-size:contain;
+          height:150px;
+          width:100%;
+        }
+        &.birthday-kid .option-icon{background-image:url('../../images/icon/options/birthday_kid.webp');}
+        &.birthday_adult .option-icon{background-image:url('../../images/icon/options/birthday_adult.webp');}
+        &.glasses .option-icon{background-image:url('../../images/icon/options/glasses.webp');}
+        &.glowsticks .option-icon{background-image:url('../../images/icon/options/glowsticks.webp');}
+        &.bracelets .option-icon{background-image:url('../../images/icon/options/bracelets.webp');}
+        &.champagne .option-icon{background-image:url('../../images/icon/options/champagne.webp');}
+        &.wine .option-icon{background-image:url('../../images/icon/options/wine.webp');}
+        &.beer .option-icon{background-image:url('../../images/icon/options/beer.webp');}
+        &.balloons .option-icon{background-image:url('../../images/icon/options/balloons.webp');}
+        &.karaoke .option-icon{background-image:url('../../images/icon/options/karaoke.webp');}
+        &.insurance .option-icon{background-image:url('../../images/icon/options/insurance.webp');}
+        &.storage .option-icon{background-image:url('../../images/icon/options/storage.webp');}
+        &.food .option-icon{background-image:url('../../images/icon/options/food.webp');}
+        &.drink .option-icon{background-image:url('../../images/icon/options/drink.webp');}
+        &-content{
+          min-height:250px;
+          text-transform:uppercase;
+          border-radius:60px;
+          background-color:$background-grey;
+          padding:10px 15px;
+          display:flex;
+          flex-direction:column;
+          flex-wrap:nowrap;
+          justify-content:space-around;
+
+          h4{
+            font-size:20px;
+            margin:15px 0;
+          }
+          h5{
+            font-size:22px;
+            font-weight:bold;
+            margin:15px 0;
+          }
+          p{
+            font-size:13px;
+            line-height:25px;
+            padding:5px 0;
+            margin:15px 0 0;
+            text-align:center;
+          }
+        }
+        @media all and (max-width:$site-width-l){
+          flex-basis:40%;
+        }
+        @media all and (max-width:$site-width-m){
+          flex-basis:80%;
+        }
+        @media all and (max-width:$site-width-s){
+          flex-basis:98%;
+        }
+      }
+    }
+  }
+}

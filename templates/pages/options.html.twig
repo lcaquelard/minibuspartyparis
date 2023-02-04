@@ -1,0 +1,206 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>nos options</h1>
+    <h2>Nous vous proposons notre gamme d'options afin d'illuminer encore plus votre soirée</h2>
+    <section id="catering">
+        <h3>traiteur</h3>
+        <p>
+            Un petit creux lors de votre soirée ? Pas de souci.<br>
+            Nous vous proposons notre service traiteur sous la forme de délicieux plateaux, dressés par nos équipes et mis à disposition tout au long de votre soirée.<br>
+            Un moyen idéal de savourer la nuit parisienne !
+        </p>
+        <table>
+            <thead>
+            <tr>
+                <td>Pièces/Pers</td>    <td>Composition</td>        <td>Prix/Pers</td>
+            </tr>
+            </thead>
+            <tr>
+                <td>10</td>             <td>7 salés / 3 sucrés</td> <td>15€</td>
+            </tr>
+            <tr>
+                <td>15</td>             <td>10 salés / 5 sucrés</td> <td>22€</td>
+            </tr>
+            <tr>
+                <td>20</td>             <td>15 salés / 5 sucrés</td> <td>30€</td>
+            </tr>
+            <tr>
+                <td>25</td>             <td>20 salés / 5 sucrés</td> <td>35€</td>
+            </tr>
+        </table>
+        <div id="catering_slider" class="slider">
+            {% for i in 1..catering_slider_pictures_amount %}
+                <img src="{{ asset('build/images/photo/options/catering/'~ i ~'.webp') }}">
+            {% endfor %}
+        </div>
+    </section>
+    <section id="other_options">
+        <h3>options supplémentaires</h3>
+        <div id="options">
+            <div class="option birthday_kid">
+                <div class="option-icon"></div>
+                <div class="option-content">
+                    <h4>pack anniversaire enfant</h4>
+                    <h5>110€</h5>
+                    <p>
+                        1 BOX À BONBON, 3 BOUTEILLES DE CHAMPOMY ET UN BUS REMPLI DE BALLONS POUR LE PLUS GRAND
+                        BONHEUR DE VOS ENFANTS&nbsp;!
+                    </p>
+                </div>
+            </div>
+            <div class="option birthday_adult">
+                <div class="option-icon"></div>
+                <div class="option-content">
+                    <h4>pack anniversaire adulte</h4>
+                    <h5>110€</h5>
+                    <p>
+                        1 BOX À BONBON, 2 BOUTEILLES DE CHAMPAGNE<br>
+                        NICOLAS FEUILLATE ET UN BUS REMPLI DE BALLONS<br>
+                        POUR AJOUTER LA TOUCHE FINALE À VOTRE SOIRÉE&nbsp;!
+                    </p>
+                </div>
+            </div>
+            <div class="option glasses">
+                <div class="option-icon"></div>
+                <div class="option-content">
+                    <h4>lunettes lumineuses LED</h4>
+                    <p>
+                        ILLUMINEZ LA NUIT PARISIENNE AVEC DES ACCESSOIRES LUMINEUX ET CAPTUREZ DES MOMENTS INOUBLIABLES&nbsp;!<br>
+                        <br>
+                        PACK (5) : <span class="bold">25€</span> - PACK (10) : <span class="bold">45€</span>
+                    </p>
+                </div>
+            </div>
+            <div class="option glowsticks">
+                <div class="option-icon"></div>
+                <div class="option-content">
+                    <h4>bâtons lumineux LED</h4>
+                    <p>
+                        ILLUMINEZ LA NUIT PARISIENNE AVEC DES ACCESSOIRES LUMINEUX ET CAPTUREZ DES MOMENTS INOUBLIABLES&nbsp;!<br>
+                        <br>
+                        PACK (5) : <span class="bold">20€</span> - PACK (10) : <span class="bold">35€</span>
+                    </p>
+                </div>
+            </div>
+            <div class="option bracelets">
+                <div class="option-icon"></div>
+                <div class="option-content">
+                    <h4>bracelets lumineux LED</h4>
+                    <p>
+                        ILLUMINEZ LA NUIT PARISIENNE AVEC DES ACCESSOIRES LUMINEUX ET CAPTUREZ DES MOMENTS INOUBLIABLES&nbsp;!<br>
+                        <br>
+                        PACK (5) : <span class="bold">15€</span> - PACK (10) : <span class="bold">25€</span>
+                    </p>
+                </div>
+            </div>
+            <div class="option champagne">
+                <div class="option-icon"></div>
+                <div class="option-content">
+                    <h4>champagne</h4>
+                    <h5>39,90€ / bouteille</h5>
+                    <p>
+                        N°1 DES GRANDES OCCASIONS<br>
+                        LE CHAMPAGNE EST UN INCONTOURNABLE<br>
+                        NOTRE CUVÉE NICOLAS FEUILLATE EST LÀ POUR VOUS
+                    </p>
+                </div>
+            </div>
+            <div class="option wine">
+                <div class="option-icon"></div>
+                <div class="option-content">
+                    <h4>vin</h4>
+                    <h5>19,90€ / bouteille</h5>
+                    <p>
+                        AMATEUR DE VINS, ROUGE, BLANC ou ROSÉ, NOUS VOUS PROPOSONS UNE SÉLECTION DE VINS AFIN D'ACCOMPAGNER VOS PLATEAUX APÉRITIFS
+                    </p>
+                </div>
+            </div>
+            <div class="option beer">
+                <div class="option-icon"></div>
+                <div class="option-content">
+                    <h4>bière</h4>
+                    <h5>1,90€ / bouteille</h5>
+                    <p>
+                        PLÛTOT BINOUZE&nbsp;?<br>
+                        LA BIÈRE EST UN CLASSIQUE DE TOUT ÉVÈNEMENT<br>
+                        PETIT BUDGET POUR PARTAGER UNE SOIRÉE MEMORABLE
+                    </p>
+                </div>
+            </div>
+            <div class="option balloons">
+                <div class="option-icon"></div>
+                <div class="option-content">
+                    <h4>votre âge en ballons</h4>
+                    <h5>50€</h5>
+                    <p>
+                        POUR PERSONNALISER AU DÉTAIL VOTRE ÉVÈNEMENT<br>
+                        CHOISISSEZ VOS BALLONS ENTRE 10 ET 100 ANS
+                    </p>
+                </div>
+            </div>
+            <div class="option karaoke">
+                <div class="option-icon"></div>
+                <div class="option-content">
+                    <h4>karaoké</h4>
+                    <h5>50€</h5>
+                    <p>
+                        HÂTE DE MONTRER VOS TALENTS EN CHANTS&nbsp;?<br>
+                        NOUS VOUS PROPOSONS NOTRE KARAOKÉ SUR ÉCRAN ET DEUX MICROS
+                    </p>
+                </div>
+            </div>
+            <div class="option insurance">
+                <div class="option-icon"></div>
+                <div class="option-content">
+                    <h4>assurance annulation</h4>
+                    <h5>80€</h5>
+                    <p>
+                        UN IMPRÉVU VOUS OBLIGE À ANNULER VOTRE PRESTATION QUELQUES JOURS AVANT L'ÉVÉNEMENT&nbsp;? AVEC L'ASSURANCE ANNULATION, VOUS ÊTES ENTIÈREMENT REMBOURSÉ, SANS JUSTIFICATIF&nbsp;!
+                    </p>
+                </div>
+            </div>
+            <div class="option storage">
+                <div class="option-icon"></div>
+                <div class="option-content">
+                    <h4>entrepôt</h4>
+                    <h5>30€</h5>
+                    <p>
+                        VOUS AVEZ ÉGALEMENT LA POSSIBILITÉ DE DÉPOSER ALCOOLS ET BOISSONS DIRECTEMENT À NOTRE ENTREPÔT,<br>
+                        AFIN QUE NOUS PUISSIONS PRÉPARER AU MIEUX VOTRE BUS&nbsp;!
+                    </p>
+                </div>
+            </div>
+            <div class="option food">
+                <div class="option-icon"></div>
+                <div class="option-content">
+                    <h4>frais de bouche</h4>
+                    <h5>gratuit</h5>
+                    <p>
+                        POSSIBILITÉ D'APPORTER VOTRE PROPRE TRAITEUR SANS FRAIS SUPPLÉMENTAIRES
+                    </p>
+                </div>
+            </div>
+            <div class="option drink">
+                <div class="option-icon"></div>
+                <div class="option-content">
+                    <h4>droit de bouchon</h4>
+                    <h5>gratuit</h5>
+                    <p>
+                        POSSIBILITÉ D'APPORTER VOS PROPRES BOUTEILLES D'ALCOOL SANS FRAIS SUPPLÉMENTAIRES
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block modals %}
+    <div class="modal catering_slider" role="dialog" aria-modal="true" aria-label="Galerie de photos des options de traiteur agrandies">
+        <div class="close"></div>
+        <div class="slider h-size-50">
+            {% for i in 1..catering_slider_pictures_amount %}
+                <img src="{{ asset('build/images/photo/options/catering/' ~ i ~ '.webp') }}" alt="Image défilant horizontalement">
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

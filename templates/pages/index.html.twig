@@ -1,6 +1,61 @@
 {% extends 'base.html.twig' %}
-{% set name = 'Accueil' %}
-{% set route = '' %}
 {% block body %}
+    <div id="index_main">
+        &nbsp;
+        <div id="greeting">
+            <span id="welcome">bienvenue</span>
+            <h1>Chez <span class="bold caps">minibus party</span></h1>
+            <p>
+                Totalement innovant, MINIBUS PARTY vous fera vibrer à bord de ses véhicules entièrement réaménagés<br>
+                <br>
+                <br>
+                En privatisant l'un de nos minibus, vous vous offrez une visite dans les rues de Paris et ses magnifiques monuments, vous pourrez faire la fête à toute heure et sans limites<br>
+                <br>
+                <br>
+                Depuis 2020, nous sommes à l'écoute de nos clients afin de leur faire vivre un moment inoubliable à bord de nos véhicules<br>
+                <br>
+                <br>
+                <span class="larger">C'est maintenant à votre tour de faire la fête à votre image !</span>
+            </p>
+        </div>
+        <div id="index_slider" class="slider">
+            {% for i in 1..slider_pictures_amount %}
+                <img src="{{ asset('build/images/photo/index/' ~ i ~ '.webp') }}" alt="Image défilant horizontalement">
+            {% endfor %}
+        </div>
+    </div>
+    <div id="contact">
+        <div>
+            <table>
+                <thead>
+                <tr>
+                    <td>CONTACT</td>
+                    <td>Email</td>
+                    <td>Partenaire</td>
+                </tr>
+                </thead>
+                <tr>
+                    <td>
+                        06 ** ** ** **
+                    </td>
+                    <td>
+                        commercial@minibusparty.com
+                    </td>
+                    <td class="logo">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+{% endblock %}
 
+{% block modals %}
+    <div class="modal index_slider" role="dialog" aria-modal="true" aria-label="Galerie de photos de l'accueil agrandies">
+        <div class="close"></div>
+        <div class="slider h-size-50">
+            {% for i in 1..slider_pictures_amount %}
+                <img src="{{ asset('build/images/photo/index/' ~ i ~ '.webp') }}" alt="Image défilant horizontalement">
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}

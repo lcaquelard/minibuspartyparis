@@ -1,6 +1,7 @@
 @use "sass:math";
 nav{
-  width:$site-width-l;
+  width:100%;
+  max-width:$site-width-l;
   margin:0 auto;
   ul{
     display:flex;
@@ -8,6 +9,7 @@ nav{
     width:100%;
     list-style: none;
     font-family: "open sans", sans-serif;
+    padding:0;
 
     li{
       width: math.div($site-width-l, 7) - 1px;
@@ -17,11 +19,11 @@ nav{
       text-align:center;
       background:linear-gradient(#454444,#141313);
       border-left:1px solid #000;
-      color:#00F4FF;
+      color:$light-blue;
       transition:color .3s;
 
       &:hover{
-        color:#F2F90D;
+        color:$yellow;
       }
       &:first-of-type{
         width: math.div($site-width-l, 7);
@@ -34,7 +36,7 @@ nav{
         border-bottom-right-radius: 10px;
       }
       &.current_page{
-        background:#F2F90D;
+        background:$yellow;
         color:#000;
       }
 
@@ -42,6 +44,12 @@ nav{
         display:inline-block;
         width:100%;
         padding:20px 0;
+        @media all and (max-width:$site-width-m){
+          padding:15px 0;
+        }
+        @media all and (max-width:$site-width-s){
+          padding:7px 0;
+        }
       }
     }
   }

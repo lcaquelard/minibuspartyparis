@@ -1,0 +1,46 @@
+{% set base_price = 290 %}
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>nos offres</h1>
+    <div class="container">
+        <table>
+            <thead>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="bold">pack basic</td>
+                <td class="bold">pack karaoké</td>
+                <td class="bold">pack premium</td>
+            </tr>
+            </thead>
+            <tr>
+                <td class="bold">Places</td>
+                <td class="bold">9</td>
+                <td class="bold">9</td>
+                <td class="bold">10</td>
+            </tr>
+            <tr>
+                <td class="bold">Durée</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            {% for i in 1..4 %}
+                <tr>
+                    <td>
+                        {{ i }} heure{% if i > 1 %}s{% endif %}
+                    </td>
+                    <td>
+                        {{ base_price + (i * 100) }}
+                    </td>
+                    <td>
+                        {{ base_price + (i * 100) + 60 }}
+                    </td>
+                    <td>
+                        {{ base_price + (i * 100) + 100 }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    &nbsp;
+{% endblock %}

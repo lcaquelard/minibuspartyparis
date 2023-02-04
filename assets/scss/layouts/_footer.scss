@@ -1,8 +1,9 @@
 footer{
   background-color:#000;
   > div{
-    background-color:#181717;
-    width:$site-width-l;
+    background-color:$background-black;
+    max-width:$site-width-l;
+    width:100%;
     margin:0 auto;
     height:220px;
 
@@ -32,7 +33,7 @@ footer{
     #footer_nav{
       display:flex;
       justify-content:center;
-      color:#C2C2C2;
+      color:$writing-light-grey;
       margin:10px auto;
 
       a{

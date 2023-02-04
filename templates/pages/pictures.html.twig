@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>photos</h1>
+    <h2>Voici un exemple de nos soirées</h2>
+    <img id="head_picture" src="{{ asset('build/images/photo/pictures/head.webp') }}">
+    &nbsp;
+    <div id="gallery">
+        {% for i in 1..12 %}
+            <img src="{{ asset('build/images/photo/pictures/'~ i ~'.webp') }}">
+        {% endfor %}
+    </div>
+{% endblock %}

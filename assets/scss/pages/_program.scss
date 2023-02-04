@@ -1,0 +1,73 @@
+#page_program{
+  h2{
+    font-weight:bold;
+  }
+  #steps{
+    width:100%;
+    background-image:radial-gradient(circle at 3.67513% 6.9401%, rgb(77, 96, 1) 0%, 11.55%, rgba(77, 96, 1, 0) 35%), radial-gradient(circle at 92.9671% 9.55404%, rgb(250, 170, 99) 0%, 17.5%, rgba(250, 170, 99, 0) 35%), radial-gradient(circle at 95.2067% 90.4818%, rgb(201, 198, 255) 0%, 34.1%, rgba(201, 198, 255, 0) 55%), radial-gradient(circle at 4.31315% 93.3464%, rgb(151, 180, 157) 0%, 29.9%, rgba(151, 180, 157, 0) 65%), radial-gradient(circle at 46.556% 11.5039%, rgba(214, 222, 72, 0.99) 0%, 25%, rgba(214, 222, 72, 0) 50%), radial-gradient(circle at 51.1214% 89.987%, rgb(147, 195, 255) 0%, 42%, rgba(147, 195, 255, 0) 70%), radial-gradient(circle at 48.9014% 49.5215%, rgb(255, 255, 255) 0%, 100%, rgba(255, 255, 255, 0) 100%);
+    .container {
+      width:100%;
+      max-width: $site-width-l - 200px;
+      margin:0 auto;
+      padding:40px 0;
+      .step{
+        display:flex;
+        flex-wrap:nowrap;
+        justify-content:flex-start;
+        margin:40px 0;
+        >img{
+          &.h{
+            min-width:430px;
+          }
+          &.v{
+            height:430px;
+          }
+        }
+        >div{
+          color:#000;
+          p{
+            padding-top:15px;
+            padding-bottom:15px;
+            margin:0;
+            font-size:15px;
+            .bold{
+              font-size:20px;
+            }
+          }
+        }
+        &:nth-of-type(2n+1){
+          flex-direction:row;
+          p{
+            padding-left:160px;
+            padding-right:0;
+            @media all and (max-width:$site-width-m){
+              padding-left:30px;
+              padding-right:5px;
+            }
+          }
+        }
+        &:nth-of-type(2n){
+          flex-direction:row-reverse;
+          p{
+            padding-left:0;
+            padding-right:160px;
+            @media all and (max-width:$site-width-m){
+              padding-left:5px;
+              padding-right:30px;
+            }
+          }
+        }
+      }
+      .thanks{
+        color:#000;
+        font-weight:bold;
+        font-size:16px;
+        line-height:20px;
+        text-align:center;
+        width: 50%;
+        margin:0 auto;
+        letter-spacing:0.5px;
+      }
+    }
+  }
+}

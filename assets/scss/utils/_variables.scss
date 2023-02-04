@@ -1,2 +1,21 @@
+/*
+    Page widths
+ */
 $site-width-l: 1000px;
+$site-width-m : 850px;
+$site-width-s : 450px;
 
+/*
+    Colours
+ */
+$background-black: rgba(24,24,24); // #181818
+$background-grey: rgba(51,51,51); // #333333
+$background-black-alpha: rgba(24,24,24,.6);
+$background-black-strong-alpha: rgba(0,0,0,.8);
+
+$writing-light-grey: #C2C2C2;
+
+// These two colours are based on the main logo and meant to have the navigation assorted with it
+// Use of a different logo for a alternate theme should go along with matching revisions to the nav.
+$yellow: rgba(253,243,0); // #00F4FF
+$light-blue: rgba(0,243,253); // #F2F90D

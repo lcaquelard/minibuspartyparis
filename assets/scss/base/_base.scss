@@ -1,9 +1,33 @@
+body{
+  margin:0;
+  padding:0;
+  font-family: "open sans", sans-serif;
+  color:#FFF;
+  background-color:#000;
+}
+
 a{
   color:inherit;
   text-decoration: inherit;
 }
 
-body{
+h1, h2, h3, h4, h5, h6{
+  font-family: arial, sans-serif;
+  text-align:center;
+}
+h1{
+  text-transform:uppercase;
+  font-family:"Marzo W00 Regular", sans-serif;
+  font-size:60px;
+  line-height:120px;
   margin:0;
-  padding:0;
+  @media all and (max-width:$site-width-m){
+    font-size:40px;
+  }
+}
+
+.bold{
+  font-weight:bold;}
+.caps{
+  text-transform: uppercase;
 }

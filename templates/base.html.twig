@@ -17,7 +17,8 @@
     </head>
     <body>
         {% include 'layouts/header.html.twig' %}
-        {% block body %}{% endblock %}
+        <main id="page_{{ current_page }}">{% block body %}{% endblock %}</main>
         {% include 'layouts/footer.html.twig' %}
+        {% block modals %}{% endblock %}
     </body>
 </html>

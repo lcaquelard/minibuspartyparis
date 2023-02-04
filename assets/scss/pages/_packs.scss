@@ -1,0 +1,76 @@
+#page_packs{
+  background-color:$background-black;
+
+  .container{
+    max-width:$site-width-l;
+    width:100%;
+    margin:0 auto;
+    text-align:center;
+
+    >p{
+      line-height:23px;
+      font-size:16px;
+    }
+
+    #packs{
+      display:flex;
+      flex-direction: column;
+
+      .pack{
+        width:100%;
+        height:520px;
+        &-left{
+          height:auto;
+          width:45%;
+          float:left;
+        }
+        &-right{
+          width:55%;
+          height:100%;
+          float:left;
+
+          h2{
+            font-family: "Marzo W00 Regular", sans-serif;
+            text-transform:uppercase;
+            font-size:28px;
+            margin:10px;
+            height:30px;
+          }
+        }
+        &-options{
+          display:flex;
+          flex-direction: row;
+          flex-wrap:wrap;
+        }
+        &-option{
+          flex-basis:50%;
+          max-width:50%;
+          &-logo{
+            width:160px;
+            height:100px;
+            background-size:contain;
+            background-position:center center;
+            background-repeat:no-repeat;
+            float:left;
+
+            &.birthday_adult{background-image:url('../../images/icon/options/birthday_adult.webp');}
+            &.bluetooth{background-image:url('../../images/icon/options/bluetooth.webp');}
+            &.carpet{background-image:url('../../images/icon/options/carpet.webp');}
+            &.driver{background-image:url('../../images/icon/options/driver.webp');}
+            &.karaoke{background-image:url('../../images/icon/options/karaoke.webp');}
+            &.lights{background-image:url('../../images/icon/options/lights.webp');}
+            &.pick_points{background-image:url('../../images/icon/options/pick_points.webp');}
+            &.softs{background-image:url('../../images/icon/options/softs.webp');}
+          }
+          &-name{
+            text-transform:uppercase;
+            font-size:13px;
+            float:left;
+            width:calc(100% - 160px);
+            padding-top:30px;
+          }
+        }
+      }
+    }
+  }
+}

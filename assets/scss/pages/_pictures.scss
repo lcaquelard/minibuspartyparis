@@ -1,0 +1,27 @@
+#page_pictures{
+  background-color:$background-black;
+  #head_picture{
+    display:block;
+    width:100%;
+    max-width:1300px;
+    margin:40px auto;
+  }
+  #gallery{
+    background-color:#FFF;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+
+    img{
+      margin:10px 0;
+      flex-basis:30%;
+      @media all and (max-width:$site-width-m){
+        flex-basis:48%;
+      }
+      @media all and (max-width:$site-width-s){
+        flex-basis:100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+#page_pricing{
+  background-color:$background-black;
+  .container{
+    background-color:$background-grey;
+    border-radius:60px;
+    width:100%;
+    max-width:$site-width-l - 300px;
+    margin:20px auto;
+    padding:20px 50px;
+    table{
+      border-collapse: collapse;
+      width:100%;
+
+      thead{
+        font-size:19px;
+        text-transform: uppercase;
+      }
+      tr{
+        height:45px;
+      }
+      td{
+        width:25%;
+        text-align: center;
+      }
+      tr > td:first-of-type.bold{
+        font-size:19px;
+      }
+    }
+  }
+}
