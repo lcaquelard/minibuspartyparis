@@ -10,14 +10,18 @@
       text-align:center;
     }
     table{
-      width:80%;
-      margin: auto;
-      font-size:18px;
+      width:100%;
+      max-width:$site-width-m;
+      margin:40px auto;
+      font-size:21px;
       text-align:center;
       tr{
         height:18px;
         td{
-          width:100% / 3;
+          width:25%;
+          &:nth-of-type{
+            width:50%;
+          }
         }
       }
     }
