@@ -25,10 +25,10 @@ class DefaultController extends AbstractController
     public function packs(): Response
     {
         $packs = array();
-        $packs[] = new Pack(1,'transfert atypique', array('carpet', 'driver', 'softs', 'lights', 'bluetooth', 'pick_points'));
-        $packs[] = new Pack(2,'transfert atypique', array('carpet', 'driver', 'softs', 'lights', 'bluetooth'));
-        $packs[] = new Pack(3,'transfert atypique', array('carpet', 'driver', 'softs', 'lights', 'bluetooth', 'karaoke'));
-        $packs[] = new Pack(4,'transfert atypique', array('carpet', 'driver', 'softs', 'lights', 'bluetooth', 'birthday_adult', 'karaoke'));
+        $packs[] = new Pack(1,'transfert atypique', 9, array('carpet', 'driver', 'softs', 'lights', 'bluetooth', 'pick_points'));
+        $packs[] = new Pack(2,'pack basic', 9, array('carpet', 'driver', 'softs', 'lights', 'bluetooth'));
+        $packs[] = new Pack(3,'pack karaoké', 9, array('carpet', 'driver', 'softs', 'lights', 'bluetooth', 'champagne', 'karaoke'));
+        $packs[] = new Pack(4,'pack premium', 10, array('carpet', 'driver', 'softs', 'lights', 'bluetooth', 'birthday_adult', 'karaoke'));
         return $this->render('pages/packs.html.twig', [
             'current_page' => 'packs',
             'route' => 'nos-packs',
@@ -98,12 +98,12 @@ class DefaultController extends AbstractController
             'title' => 'Mentions légales',
         ]);
     }
-    #[Route('/cgu', name: 'cgu')]
+    #[Route('/cgv', name: 'cgv')]
     public function cgu(): Response
     {
-        return $this->render('pages/cgu.html.twig', [
-            'current_page' => 'cgu',
-            'route' => 'cgu',
+        return $this->render('pages/cgv.html.twig', [
+            'current_page' => 'cgv',
+            'route' => 'cgv',
             'name' => 'Conditions générales d\'utilisation',
             'title' => 'Conditions générales de vente',
         ]);

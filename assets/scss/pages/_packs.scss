@@ -18,10 +18,11 @@
 
       .pack{
         width:100%;
-        height:520px;
+        height:450px;
+        margin-bottom:30px;
         &-left{
-          height:auto;
-          width:45%;
+          width:auto;
+          height:100%;
           float:left;
         }
         &-right{
@@ -31,6 +32,7 @@
 
           h2{
             font-family: "Marzo W00 Regular", sans-serif;
+            text-align: left;
             text-transform:uppercase;
             font-size:28px;
             margin:10px;
@@ -38,24 +40,30 @@
           }
         }
         &-options{
-          display:flex;
-          flex-direction: row;
+          display:grid;
+          grid-template-columns: 45% 45%;
+          grid-gap:0;
+          grid-auto-rows:minmax(100px, auto);
+          flex-direction: column;
           flex-wrap:wrap;
+          margin-left:30px;
+          height:calc(100% - 50px);
         }
         &-option{
-          flex-basis:50%;
-          max-width:50%;
+          margin-top:15px;
+          width:100%;
           &-logo{
-            width:160px;
-            height:100px;
+            width:100px;
+            height:85px;
             background-size:contain;
             background-position:center center;
             background-repeat:no-repeat;
             float:left;
 
-            &.birthday_adult{background-image:url('../../images/icon/options/birthday_adult.webp');}
+            &.birthday_adult{background-image:url('../../images/icon/options/birthday_adult.webp');height:140px;}
             &.bluetooth{background-image:url('../../images/icon/options/bluetooth.webp');}
             &.carpet{background-image:url('../../images/icon/options/carpet.webp');}
+            &.champagne{background-image:url('../../images/icon/options/champagne.webp');height:140px;}
             &.driver{background-image:url('../../images/icon/options/driver.webp');}
             &.karaoke{background-image:url('../../images/icon/options/karaoke.webp');}
             &.lights{background-image:url('../../images/icon/options/lights.webp');}
@@ -67,7 +75,11 @@
             font-size:13px;
             float:left;
             width:calc(100% - 160px);
-            padding-top:30px;
+            height:100%;
+            span{
+              vertical-align: middle;
+              height:100%;
+            }
           }
         }
       }

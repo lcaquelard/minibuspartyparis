@@ -4,14 +4,16 @@ namespace App\Classes;
 
 class Pack
 {
-    private string $name        = '';
-    private string $title        = '';
-    private array $options      = array();
+    private string $name;
+    private string $title;
+    private array $options = array();
+    private int $room;
 
     static private array $option_list = array(
         'birthday_adult' => 'pack anniversaire adulte inclus',
         'bluetooth' => 'musique par bluetooth',
         'carpet' => 'tapis d\'accueil',
+        'champagne' => '1 bouteille de champagne incluse',
         'driver' => 'chauffeur',
         'karaoke' => 'karaoké sur écran et deux micros',
         'lights' => 'bandeau lumineux au choix',
@@ -19,10 +21,11 @@ class Pack
         'softs' => 'boissons softs incluses'
     );
 
-    public function __construct(string $name, string $title, array $options = array())
+    public function __construct(string $name, string $title, int $room = 9, array $options = array())
     {
         $this->name         = $name;
         $this->title        = $title;
+        $this->room         = $room;
         foreach($options as $option){
             if (!array_key_exists($option, $this->options))
                 $this->options[$option] = self::$option_list[$option];
@@ -47,6 +50,16 @@ class Pack
     public function setTitle(string $title)
     {
         $this->title = $title;
+    }
+
+    public function getRoom(): int
+    {
+        return $this->room;
+    }
+
+    public function setRoom(int $room)
+    {
+        $this->room = $room;
     }
 
     public function getOptions(): array
