@@ -1,12 +1,16 @@
 @use "sass:math";
 nav{
   width:100%;
-  max-width:$site-width-l;
-  margin:0 auto;
+  position:sticky;
+  top:0px;
+  z-index: 10;
+  margin-top:-80px;
+
   ul{
     display:flex;
-    margin:0;
     width:100%;
+    max-width:$site-width-l;
+    margin:0 auto;
     list-style: none;
     font-family: "open sans", sans-serif;
     padding:0;
