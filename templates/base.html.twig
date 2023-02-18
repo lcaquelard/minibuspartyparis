@@ -12,14 +12,14 @@
             {{ encore_entry_link_tags('main') }}
         {% endblock %}
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('main') }}
-        {% endblock %}
     </head>
     <body>
         {% include 'layouts/header.html.twig' %}
         <main id="page_{{ current_page }}">{% block body %}{% endblock %}</main>
         {% include 'layouts/footer.html.twig' %}
         {% block modals %}{% endblock %}
+        {% block javascripts %}
+            {{ encore_entry_script_tags('main') }}
+        {% endblock %}
     </body>
 </html>
