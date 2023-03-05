@@ -1,0 +1,12 @@
+#page_legals{
+  background-color:$background-black;
+  p{
+    width:calc(100% - 60px);
+    max-width:$site-width-l;
+    margin:40px auto 0;
+    padding:30px;
+    text-align:center;
+    font-size:16px;
+    line-height:20px;
+  }
+}

@@ -20,15 +20,32 @@
         width:100%;
         height:450px;
         margin-bottom:30px;
+        @media screen and (max-width:$site-width-m){
+          height:auto;
+        }
         &-left{
           width:auto;
           height:100%;
           float:left;
+          display:flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: stretch;
+          @media screen and (max-width:$site-width-m){
+            width:100%;
+            height:auto;
+            float:none;
+          }
         }
         &-right{
           width:55%;
           height:100%;
           float:left;
+          @media screen and (max-width:$site-width-m){
+            width:100%;
+            height:auto;
+            float:none;
+          }
 
           h2{
             font-family: "Marzo W00 Regular", sans-serif;
@@ -46,24 +63,35 @@
           grid-auto-rows:minmax(100px, auto);
           flex-direction: column;
           flex-wrap:wrap;
-          margin-left:30px;
+          margin-left:10%;
           height:calc(100% - 50px);
+          @media screen and (max-width:$site-width-m){
+            margin-left:4%;
+            grid-template-columns: 48% 48%;
+          }
         }
         &-option{
           margin-top:15px;
           width:100%;
+          height:85px;
+          font-size:13px;
+          &.bigger{
+            grid-row: 3 / 5;
+            grid-column: 2;
+            height: 66%;
+          }
           &-logo{
             width:100px;
-            height:85px;
+            height:100%;
             background-size:contain;
             background-position:center center;
             background-repeat:no-repeat;
             float:left;
 
-            &.birthday_adult{background-image:url('../../images/icon/options/birthday_adult.webp');height:140px;}
+            &.birthday_adult{background-image:url('../../images/icon/options/birthday_adult.webp');}
             &.bluetooth{background-image:url('../../images/icon/options/bluetooth.webp');}
             &.carpet{background-image:url('../../images/icon/options/carpet.webp');}
-            &.champagne{background-image:url('../../images/icon/options/champagne.webp');height:140px;}
+            &.champagne{background-image:url('../../images/icon/options/champagne.webp');}
             &.driver{background-image:url('../../images/icon/options/driver.webp');}
             &.karaoke{background-image:url('../../images/icon/options/karaoke.webp');}
             &.lights{background-image:url('../../images/icon/options/lights.webp');}
@@ -74,12 +102,12 @@
             text-transform:uppercase;
             font-size:13px;
             float:left;
-            width:calc(100% - 160px);
+            width:calc(100% - 105px);
+            padding-left:5px;
             height:100%;
-            span{
-              vertical-align: middle;
-              height:100%;
-            }
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
           }
         }
       }

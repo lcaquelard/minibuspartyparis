@@ -10,17 +10,47 @@
       max-width: $site-width-l - 200px;
       margin:0 auto;
       padding:40px 0;
+      @media screen and (max-width:$site-width-m){
+        padding:0;
+      }
       .step{
         display:flex;
         flex-wrap:nowrap;
         justify-content:flex-start;
-        margin:40px 0;
-        >img{
-          &.h{
-            min-width:430px;
+        @media screen and (min-width:$site-width-m){
+          margin:40px 0;
+          &:nth-of-type(2n+1){
+            flex-direction:row;
+            p{
+              padding-left:100px;
+              padding-right:0;
+            }
           }
-          &.v{
-            height:430px;
+          &:nth-of-type(2n){
+            flex-direction:row-reverse;
+            p{
+              padding-left:0;
+              padding-right:100px;
+            }
+          }
+        }
+        @media screen and (max-width:$site-width-m){
+          flex-direction: column;
+          p{
+            padding:30px;
+          }
+        }
+        >img{
+          @media screen and (min-width:$site-width-m) {
+            &.h {
+              min-width: 430px;
+            }
+            &.v {
+              height: 430px;
+            }
+          }
+          @media screen and (max-width:$site-width-m){
+            width:100%;
           }
         }
         >div{
@@ -32,28 +62,6 @@
             font-size:15px;
             .bold{
               font-size:20px;
-            }
-          }
-        }
-        &:nth-of-type(2n+1){
-          flex-direction:row;
-          p{
-            padding-left:100px;
-            padding-right:0;
-            @media all and (max-width:$site-width-m){
-              padding-left:30px;
-              padding-right:5px;
-            }
-          }
-        }
-        &:nth-of-type(2n){
-          flex-direction:row-reverse;
-          p{
-            padding-left:0;
-            padding-right:100px;
-            @media all and (max-width:$site-width-m){
-              padding-left:5px;
-              padding-right:30px;
             }
           }
         }

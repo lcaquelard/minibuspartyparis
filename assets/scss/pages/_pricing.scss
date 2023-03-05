@@ -3,10 +3,14 @@
   .container{
     background-color:$background-grey;
     border-radius:60px;
-    width:100%;
+    width:calc(100% - 100px);
     max-width:$site-width-l - 300px;
     margin:20px auto;
     padding:20px 50px;
+    @media screen and (max-width:$site-width-s){
+      width:calc(100% - 40px);
+      padding:20px 20px;
+    }
     table{
       border-collapse: collapse;
       width:100%;
@@ -14,9 +18,15 @@
       thead{
         font-size:19px;
         text-transform: uppercase;
+        @media screen and (max-width:$site-width-s){
+          font-size:13px;
+        }
       }
       tr{
         height:45px;
+        @media screen and (max-width:$site-width-s){
+          height:35px;
+        }
       }
       td{
         width:25%;

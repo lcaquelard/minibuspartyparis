@@ -12,8 +12,15 @@
   background-size:$size;
 }
 
+@mixin tablet-width($width:100%){
+  @media screen and (max-width:$site-width-m) {
+    max-width:$width;
+    width:$width;
+  }
+}
+
 @mixin mobile-width($width:100%){
-  @media screen and (max-width:$tablet_width) {
+  @media screen and (max-width:$site-width-s) {
     max-width:$width;
     width:$width;
   }
