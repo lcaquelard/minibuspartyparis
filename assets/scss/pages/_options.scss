@@ -72,13 +72,6 @@
       .option{
         margin:10px 0;
         flex-basis:31%;
-        &:nth-of-type(1),
-        &:nth-of-type(2){
-          flex-basis:37%;
-          .option-icon{
-            height:250px;
-          }
-        }
         &-icon{
           background-repeat:no-repeat;
           background-position:center center;
@@ -88,6 +81,7 @@
         }
         &.birthday_kid .option-icon{background-image:url('../../images/icon/options/birthday_kid.webp');}
         &.birthday_adult .option-icon{background-image:url('../../images/icon/options/birthday_adult.webp');}
+        &.pinata .option-icon{background-image:url('../../images/icon/options/pinata.webp');}
         &.glasses .option-icon{background-image:url('../../images/icon/options/glasses.webp');}
         &.glowsticks .option-icon{background-image:url('../../images/icon/options/glowsticks.webp');}
         &.bracelets .option-icon{background-image:url('../../images/icon/options/bracelets.webp');}
